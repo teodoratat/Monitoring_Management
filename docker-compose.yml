@@ -1,0 +1,48 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'user-db'
+      MYSQL_ROOT_PASSWORD: 'andreea2002!'
+    ports:
+      - "3307:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+  db2:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'device2-db'
+      MYSQL_ROOT_PASSWORD: 'andreea2002!'
+    ports:
+      - "3308:3306"
+    volumes:
+      - device2-db:/var/lib/mysql
+  spring-demo:
+    image: assignment1_users
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_IP=db
+      - DB_PORT=3306
+      - DB_DBNAME=user-db
+      - DB_USER=root
+      - DB_PASSWORD=andreea2002!
+  spring-demo2:
+    image: assignment1_devices
+    ports:
+      - "8082:8082"
+    environment:
+      - DB_IP=db2
+      - DB_PORT=3306
+      - DB_DBNAME=device2-db
+      - DB_USER=root
+      - DB_PASSWORD=andreea2002!    
+  frontend:
+    image: assignment1_fe
+    ports:
+      - "3000:3000"  
+volumes:
+  my-db:
+  device2-db:
