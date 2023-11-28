@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02336d09-1d3f-4969-926d-586a92bff136" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/react-demo/src/commons/images/medical2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management" beforeDir="false" afterPath="$PROJECT_DIR$/device-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/DeviceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/DeviceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/DeviceDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/DeviceDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/dtos/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/entities/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/entities/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/java/ro/tuc/ds2020/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device-management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/device-management/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/public/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/commons/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/commons/styles/project-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/src/commons/styles/project-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/src/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/navigation-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/src/navigation-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demo/src/person/components/person-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demo/src/person/components/person-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/main/java/ro/tuc/ds2020/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/main/java/ro/tuc/ds2020/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/main/java/ro/tuc/ds2020/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/main/java/ro/tuc/ds2020/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/Ds2020TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/Ds2020TestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/controllers/UserControllerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/controllers/UserControllerUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/services/UserServiceIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-demo-master/src/test/java/ro/tuc/ds2020/services/UserServiceIntegrationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2YCy01WGmlLAFXBICOGm4F4A6TL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02336d09-1d3f-4969-926d-586a92bff136" name="Changes" comment="" />
+      <created>1700043629917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700043629917</updated>
+      <workItem from="1700043633554" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
