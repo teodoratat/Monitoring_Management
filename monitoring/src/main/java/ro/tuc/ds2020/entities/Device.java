@@ -22,13 +22,13 @@ public class Device {
     private UUID userId;
 
     @Column(name = "max_hourly_energy_consumption")
-    private double maxHourlyEnergyConsumption;
+    private int maxHourlyEnergyConsumption;
 
-    public double getMaxHourlyEnergyConsumption() {
+    public int getMaxHourlyEnergyConsumption() {
         return maxHourlyEnergyConsumption;
     }
 
-    public void setMaxHourlyEnergyConsumption(double maxHourlyEnergyConsumption) {
+    public void setMaxHourlyEnergyConsumption(int maxHourlyEnergyConsumption) {
         this.maxHourlyEnergyConsumption = maxHourlyEnergyConsumption;
     }
 
@@ -48,7 +48,7 @@ public class Device {
         this.id = id;
     }
 
-    public Device(UUID id, UUID userId, double maxHourlyEnergyConsumption) {
+    public Device(UUID id, UUID userId, int maxHourlyEnergyConsumption) {
         this.id = id;
         this.userId = userId;
         this.maxHourlyEnergyConsumption = maxHourlyEnergyConsumption;

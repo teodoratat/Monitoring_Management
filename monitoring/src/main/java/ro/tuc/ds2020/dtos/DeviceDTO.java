@@ -6,12 +6,12 @@ public class DeviceDTO {
 
     private UUID id;
     private UUID userId;
-    private double maxHourlyEnergyConsumption;
+    private int maxHourlyEnergyConsumption;
 
     public DeviceDTO() {
     }
 
-    public DeviceDTO(UUID id, UUID userId, double maxHourlyEnergyConsumption) {
+    public DeviceDTO(UUID id, UUID userId, int maxHourlyEnergyConsumption) {
         this.id = id;
         this.userId = userId;
         this.maxHourlyEnergyConsumption = maxHourlyEnergyConsumption;
@@ -33,11 +33,11 @@ public class DeviceDTO {
         this.userId = userId;
     }
 
-    public double getMaxHourlyEnergyConsumption() {
+    public int getMaxHourlyEnergyConsumption() {
         return maxHourlyEnergyConsumption;
     }
 
-    public void setMaxHourlyEnergyConsumption(double maxHourlyEnergyConsumption) {
+    public void setMaxHourlyEnergyConsumption(int maxHourlyEnergyConsumption) {
         this.maxHourlyEnergyConsumption = maxHourlyEnergyConsumption;
     }
 }

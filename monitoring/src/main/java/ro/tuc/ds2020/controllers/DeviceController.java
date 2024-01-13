@@ -5,7 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ro.tuc.ds2020.dtos.DeviceDTO;
+import ro.tuc.ds2020.entities.HourlyEnergyConsumption;
 import ro.tuc.ds2020.services.DeviceService;
+import ro.tuc.ds2020.services.MeasurementService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -17,10 +19,12 @@ import java.util.UUID;
 public class DeviceController {
 
     private final DeviceService deviceService;
-
+    private final MeasurementService measurementService;
     @Autowired
-    public DeviceController(DeviceService deviceService) {
+    public DeviceController(DeviceService deviceService,
+    MeasurementService measurementService) {
         this.deviceService = deviceService;
+        this.measurementService = measurementService;
     }
 
     @GetMapping("/all")
@@ -55,5 +59,10 @@ public class DeviceController {
         deviceService.delete(deviceId);
         String responseMessage = "Device with ID " + deviceId + " has been successfully deleted.";
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+    @PostMapping("/calculate-hourly-energy/{deviceId}")
+    public ResponseEntity<String> calculateHourlyEnergy(@PathVariable UUID deviceId) {
+        measurementService.calculateAndStoreHourlyEnergyConsumption(deviceId);
+        return ResponseEntity.ok("Calculation initiated for device: " + deviceId);
     }
 }

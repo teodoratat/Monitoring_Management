@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -31,7 +32,23 @@ public class HourlyEnergyConsumption implements Serializable {
     @JoinColumn(name = "deviceId")
     private Device device;
     @Column(name = "time", nullable = false)
-    private Date date;
+    private LocalDateTime date;
+
+    public HourlyEnergyConsumption() {
+    }
+
+    public HourlyEnergyConsumption(int id, double totalConsumption, Device device, LocalDateTime date) {
+    this.id = id;
+    this.date = date;
+    this.totalConsumption = totalConsumption;
+    this.device = device;
+    }
+
+    public HourlyEnergyConsumption(double totalConsumption, Device device, LocalDateTime date) {
+    this.totalConsumption = totalConsumption;
+    this.device = device;
+    this.date = date;
+    }
 
     public Device getDevice() {
         return device;
@@ -57,11 +74,11 @@ public class HourlyEnergyConsumption implements Serializable {
         this.totalConsumption = totalConsumption;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 }

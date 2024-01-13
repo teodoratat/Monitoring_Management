@@ -57,4 +57,8 @@ public class DeviceService {
     public void delete(UUID deviceId) {
         deviceRepository.deleteById(deviceId);
     }
+    public Device findById(UUID deviceId) {
+        Optional<Device> deviceOptional = deviceRepository.findById(deviceId);
+        return deviceOptional.orElseThrow(() -> new RuntimeException("Device not found with id: " + deviceId));
+    }
 }

@@ -2,20 +2,21 @@ package ro.tuc.ds2020.dtos;
 
 import ro.tuc.ds2020.entities.Device;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
 public class EnergySentDTO {
 
     private int id;
-    private Date date;
+    private LocalDateTime date;
     private double value;
     // replace deviceId with Device
 
     private UUID deviceId; // Assuming you want to include the device ID in the DTO
     private Device device;
 
-    public EnergySentDTO(int id, Date date, double value, Device device) {
+    public EnergySentDTO(int id, LocalDateTime date, double value, Device device) {
         this.id = id;
         this.date = date;
         this.value = value;
@@ -29,7 +30,7 @@ public class EnergySentDTO {
     public EnergySentDTO() {
     }
 
-    public EnergySentDTO(int id, Date date, double value, UUID deviceId) {
+    public EnergySentDTO(int id, LocalDateTime date, double value, UUID deviceId) {
         this.id = id;
         this.date = date;
         this.value = value;
@@ -44,11 +45,11 @@ public class EnergySentDTO {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

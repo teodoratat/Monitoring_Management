@@ -1,6 +1,5 @@
-package ro.tuc.ds2020.Rabbit;
+package ro.tuc.ds2020.Rabbit_Devices;
 
-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -10,13 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MQConfig {
-    public static final String QUEUE = "devices_queue";
+public class MQConfigDevice {
+    public static final String QUEUE_DEVICE = "devices_management_queue";
     public static final String EXCHANGE = "message_exchange";
     public static final String ROUTINGKEY = "message_routingkey";
     @Bean
-    public Queue queue(){
-        return new Queue(QUEUE,false);
+    public Queue devicesManagementQueue(){
+
+        return new Queue(QUEUE_DEVICE,false,false,false);
     }
     @Bean
     public TopicExchange exchange(){

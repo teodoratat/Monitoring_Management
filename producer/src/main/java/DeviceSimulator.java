@@ -2,6 +2,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.*;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.Properties;
 import java.util.UUID;
 import java.util.concurrent.Executors;
@@ -19,9 +20,8 @@ public class DeviceSimulator {
     private static final int RABBITMQ_PORT = 5672;
     private static final String RABBITMQ_USERNAME = "guest";
     private static final String RABBITMQ_PASSWORD = "guest";
-
-    private static final String CONFIG_FILE_PATH = "C:\\Users\\VivoBook\\Desktop\\assignment1\\producer\\src\\main\\resources\\devices.txt";
-    private static final String SENSOR_DATA_FILE_PATH = "C:\\Users\\VivoBook\\Desktop\\assignment1\\producer\\src\\main\\resources\\sensor.csv";
+    private static final String CONFIG_FILE_PATH = "C:\\Users\\asus\\Desktop\\assignment1\\producer\\src\\main\\resources\\devices.txt";
+    private static final String SENSOR_DATA_FILE_PATH = "C:\\Users\\asus\\Desktop\\assignment1\\producer\\src\\main\\resources\\sensor.csv";
     private static BufferedReader sensorDataReader;
 
 
@@ -85,6 +85,7 @@ public class DeviceSimulator {
 
     private static void startSimulatedDataSending(String deviceId) {
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+        LocalDateTime[] lastTimestamp = {LocalDateTime.now()}; // Wrap in an array to make it mutable
 
         try {
             ConnectionFactory factory = new ConnectionFactory();
@@ -98,13 +99,15 @@ public class DeviceSimulator {
 
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
-
             executorService.scheduleAtFixedRate(() -> {
                 double measurementValue = readNextMeasurementValueFromSensor();
                 if (measurementValue != Double.MIN_VALUE) {
                     try {
-                        long timestamp = System.currentTimeMillis();
-                        DeviceData deviceData = new DeviceData(timestamp, deviceId, measurementValue);
+                        // Calculate the next timestamp by adding one hour to the last timestamp
+                        lastTimestamp[0] = lastTimestamp[0].plusMinutes(10);
+                        String formattedTimestamp = lastTimestamp[0].toString();
+
+                        DeviceData deviceData = new DeviceData(formattedTimestamp, deviceId, measurementValue);
                         Gson gson = new Gson();
                         String jsonMessage = gson.toJson(deviceData);
                         channel.basicPublish("", QUEUE_NAME, null, jsonMessage.getBytes());
@@ -113,7 +116,7 @@ public class DeviceSimulator {
                         e.printStackTrace();
                     }
                 }
-            }, 0, 10, TimeUnit.SECONDS);
+            }, 0, 3, TimeUnit.SECONDS);
         } catch (IOException | TimeoutException e) {
             e.printStackTrace();
         }

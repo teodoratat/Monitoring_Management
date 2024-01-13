@@ -20,7 +20,7 @@ public class EnergySent {
     private int id;
 
     @Column(name = "time", nullable = false)
-    private Date date;
+    private LocalDateTime date;
 
     @Column(name = "value", nullable = false)
     private double value;
@@ -30,7 +30,7 @@ public class EnergySent {
     @JoinColumn(name = "deviceId")
     private Device device;
 
-    public EnergySent(int id, Date date, double value, Device device) {
+    public EnergySent(int id, LocalDateTime date, double value, Device device) {
         this.id = id;
         this.date = date;
         this.value = value;
@@ -50,11 +50,11 @@ public class EnergySent {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
